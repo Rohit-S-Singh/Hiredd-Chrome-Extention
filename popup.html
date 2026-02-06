@@ -1,30 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Hiredd</title>
-  <meta charset="UTF-8">
-
-  <link rel="stylesheet" type="text/css" href="./style.css">
+  <title>Job Detector</title>
+  <link rel="stylesheet" href="styles/popup.css">
 </head>
 <body>
   <div class="container">
-    <img src="icon.png" alt="Hiredd Logo" class="logo">
-    <h1>Welcome to Hiredd!!</h1>
-    <p class="description">
-      At Hiredd, we’re transforming the job search experience for candidates. We provide powerful tools like bulk email outreach, application tracking, recruiter connections, AI-driven resume building, and expert guidance — all designed to help you land your dream job faster and smarter.
-    </p>
-    <div class="features">
-      <strong>Extension Features:</strong> Our extension makes it easier for you to manage your recruitment pipeline and stay on top of your communication with candidates, all from within your inbox.
-    </div>
-
-    <!-- This is where your job detection status will appear -->
-    <p id="status" class="status-message">Checking current page for jobs...</p>
-
-    <button id="login" onclick="window.location.href='https://hired-eta.vercel.app/login';">Login</button>
-    <footer>
-        <p>Created by <strong>Team Hiredd</strong> with &#10084;.</p>
-        <a href="https://hired-eta.vercel.app" target="_blank">Visit our website</a> for more info.
-    </footer>
+    <h2>Job Page Detector</h2>
+    <p id="status">Loading...</p>
+    <p id="role"></p>
+    <p id="company"></p>
   </div>
   <script src="popup.js"></script>
 </body>

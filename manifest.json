@@ -1,26 +1,21 @@
 {
-    "manifest_version": 3,
-    "name": "Hiredd Extension",
-    "version": "1.0",
-    "description": "Track job applications, mock interviews, send emails, and find recruiters.",
-    "permissions": ["activeTab"],
-    "background": {
-      "service_worker": "background.js"
-    },
-    "host_permissions": ["<all_urls>"],
-    "action": {
-      "default_popup": "popup.html",
-      "default_icon": {
-        "16": "icon.png",
-        "48": "icon.png",
-        "128": "icon.png"
-      }
-    },
-    "content_scripts": [
-      {
-        "matches": ["<all_urls>"],
-        "js": ["content.js"]
-      }
-    ]
+  "manifest_version": 3,
+  "name": "Auto Job Form Filler",
+  "version": "1.0",
+  "description": "Autofills job application forms.",
+  "permissions": ["scripting", "activeTab", "storage"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html"
   }
-  
+}  
